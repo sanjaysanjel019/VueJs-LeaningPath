@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://www.vuejs.org">
-        <img src="https://vuejs.org/images/logo.png" align="center"  style="width:200px; height:200px" alt="VueJs Official Logo"/>
+        <img src="https://vuejs.org/images/logo.png" align="center"  style="width:150px; height:150px" alt="VueJs Official Logo"/>
     </a>
 </p>
 <h1 align="center" style="border: 0;"> VueJS Learning Path </h1>
