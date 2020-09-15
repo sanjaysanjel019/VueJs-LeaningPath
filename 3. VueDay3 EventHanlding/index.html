@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs Events</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+      <h1>Keyboard Events</h1>
+      <h2>Two Way Data Binding</h2>
+    <p>Two-way data-binding so it prints your name and age as your write it.</p>
+      <label> Name: </label>
+      <input type="text" v-model="name">
+      <span>{{name}}</span>
+      <label>Age:</label>
+      <input type="text"  v-model="age">
+      <span>{{age}}</span>
+
+<br><br><br><br>
+<h2>Event Modifiers</h2>
+<p>You enter your name and press Enter and it will console log your name</p>
+        <label> Name: </label>
+        <input type="text" v-on:keyup.enter="logName">
+        
+        <label>Age:</label>
+        <input type="text" v-on:keyup.enter="logAge">
+        
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
