@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS  Conditionals</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>Dynamic CSS</h1>
+       <button @click="error = !error">Toggle Error</button>
+       <button @click="success = !success">Toggle Success</button>
+       <p v-if="error"> This is an error message. </p>
+       <p v-else-if="success">Whooo! It worked.</p>
+    </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

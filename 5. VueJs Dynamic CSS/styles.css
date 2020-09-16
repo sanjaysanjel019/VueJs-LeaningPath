@@ -14,3 +14,8 @@ span{
     content: "nearby";
     margin-left: 10px;
 }
+
+.mongol span:before{
+    content:"farway";
+    margin-right:10px
+}

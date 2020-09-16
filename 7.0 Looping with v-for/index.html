@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping through v-for</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>v-for Looping Example #1</h1>
+        <ul>
+            <li v-for="character in characters">
+                {{character}}
+            </li>
+        </ul>
+
+        <hr>
+        <h1>v-for Looping Example #2</h1>
+        <p v-for="man in detectives">
+            Name:{{man.name}}
+            <span style="margin-left: 10px;"> Age:{{man.age}} </span>
+             
+        </p>
+<hr>
+        <template v-for="detective in detectives">
+            <p v-for="(val,key) in detective">{{key}}--{{val}}</p>
+        </template>
+    </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
