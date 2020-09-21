@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Components</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h3>Working with $refs</h3>
+        <input v-model="output" type="text" ref="input">
+        <p>{{output}}</p>
+        <button @click="doTheWork">$ref</button>
+       <greeting/> <!--Reusable Vue Component-->
+            <!-- <button @click="changeName">Change the Name</button> -->
+
+    </div>
+   
+    <div id="instance1">
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
