@@ -2,7 +2,7 @@
   <div id="app">
     <app-header />
     <h1>Hello {{name}}</h1>
-    <app-main />
+    <app-main v-bind:typeOfCurry="typeOfCurry"></app-main>
     <app-footer />
   </div>
 </template>
@@ -21,6 +21,33 @@ export default {
   data: function () {
     return {
       name: "Monica Belluci",
+      typeOfCurry: [
+        {
+          name: "Mexican Curry",
+          desc: "A authetic Mexican flavoured dish",
+          isShow: false,
+        },
+        {
+          name: "Sprinky Chinese",
+          desc: "A Mouth watering Chinese touch",
+          isShow: false,
+        },
+        {
+          name: "American Bull Cheese",
+          desc: "Huge American CHeeseburger",
+          isShow: false,
+        },
+        {
+          name: "Tadka touch",
+          desc: "A spicy touch of Indian masala dish",
+          isShow: false,
+        },
+        {
+          name: "Mo:Mo",
+          desc: "Flavourful and authntic Nepali cuisine",
+          isShow: false,
+        },
+      ],
     };
   },
 };
