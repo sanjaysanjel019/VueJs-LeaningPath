@@ -1,16 +1,16 @@
 <template>
   <footer>
-    <p>{{copyright}}</p>
+    <p>Copyright {{ title }}</p>
   </footer>
 </template>
 
 <script>
 export default {
   name: "Footer",
-  data: function () {
-    return {
-      copyright: "Copyright 2020 MonkeyStudios",
-    };
+  props: {
+    title: {
+      type: String,
+    },
   },
 };
 </script>

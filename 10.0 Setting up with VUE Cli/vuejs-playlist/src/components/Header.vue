@@ -1,16 +1,21 @@
 <template>
   <header>
-    <h1>{{title}}</h1>
+    <h1 @click="changeTitle">{{ titleHeader }}</h1>
   </header>
 </template>
 
 <script>
 export default {
   name: "Header",
-  data: function () {
-    return {
-      title: "New Vue Header",
-    };
+  props: {
+    titleHeader: {
+      type: String,
+    },
+  },
+  methods: {
+    changeTitle: function () {
+      this.$emit("changeTitle", "Hormonal Locha"); //here changeTitle is the event, so we listen to this event on App.vue component
+    },
   },
 };
 </script>
