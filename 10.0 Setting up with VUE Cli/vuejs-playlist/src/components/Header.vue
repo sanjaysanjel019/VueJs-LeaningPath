@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { bus } from "../main";
 export default {
   name: "Header",
   props: {
@@ -14,7 +15,9 @@ export default {
   },
   methods: {
     changeTitle: function () {
-      this.$emit("changeTitle", "Hormonal Locha"); //here changeTitle is the event, so we listen to this event on App.vue component
+      // this.$emit("changeTitle", "Hormonal Locha"); //here changeTitle is the event, so we listen to this event on App.vue component
+      this.titleHeader = "Mona Lisa";
+      bus.$emit("titleChanged", "Mona Lisa");
     },
   },
 };

@@ -5,12 +5,18 @@
 </template>
 
 <script>
+import { bus } from "../main";
 export default {
   name: "Footer",
   props: {
     title: {
       type: String,
     },
+  },
+  created() {
+    bus.$on("titleChanged", (data) => {
+      this.title = data;
+    });
   },
 };
 </script>
