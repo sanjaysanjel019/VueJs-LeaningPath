@@ -1,11 +1,11 @@
 <template>
   <div v-theme:column="'narrow'" id="show-blogs">
-      <h1>All Blog Articles</h1>
+      <h1>List Blog Articles</h1>
       <input type="text" v-model="searchQuery"  placeholder="Search here" />
       <div class="single-blog" v-for="(blog,item) in filteredBlogs " v-bind:key="item">
         <h3 v-rainbow>{{blog.title | to-uppercase}}</h3>
     <!--redtext is a custom directives -->
-        <article v-redText>{{blog.body | snippet}}</article> 
+         
         </div>
       
 
@@ -13,8 +13,7 @@
 </template>
 
 <script>
-
-import searchMixin from '../mixins/searchMixin';
+import searchMixin  from '../mixins/searchMixin';
 export default {
   name: "showBlogs",
   
@@ -29,13 +28,11 @@ export default {
   },
   created: function(){
       this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
-          this.blogs = data.body.slice(0,10) ;
-          
-          
+          this.blogs = data.body.slice(0,10) ;          
       })
   },
   computed: {
-   
+    
   },
   filters: {
     toUppercase(value){
@@ -54,7 +51,8 @@ export default {
       }
     }
   },
-  mixins: [searchMixin]
+  mixins:[searchMixin]
+
   
 };
 </script>
